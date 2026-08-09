@@ -137,10 +137,9 @@ asthma-exacerbation-model/
 └── results/
     ├── figures/
     └── tables/
+```
 
-
-
-## License
+# License
 
 The project code is available under the MIT License.
 
