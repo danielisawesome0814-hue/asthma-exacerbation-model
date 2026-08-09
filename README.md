@@ -74,23 +74,51 @@ The project includes:
 
 ## Key Findings
 
-Controlled exposure experiments showed that greater exposure magnitude produced larger peak and cumulative simulated inflammation responses.
+### Environmental Data and Baseline Simulation
 
-Longer exposure events also produced larger cumulative inflammation responses.
+The final dataset contained **365 daily environmental observations** from 2024.
 
-The strongest model-implied exposure-inflammation correlation occurred at a lag of approximately 2 days.
+Using the observed environmental exposure trajectory, the model produced:
 
-Structural identifiability analysis showed that, when medication is constant, the parameters $\beta$ and $\gamma$ cannot be estimated separately because the model depends on them through
+- mean environmental exposure: **0.425**
+- mean simulated inflammation: **0.489**
+- maximum simulated inflammation: **0.603**
+
+These inflammation values are normalized model states, not measured clinical inflammation levels.
+
+### Exposure Magnitude
+
+For a controlled 7-day exposure event, increasing the normalized exposure magnitude increased both peak and cumulative simulated inflammation.
+
+| Exposure Magnitude | Peak Inflammation | Excess Inflammation AUC |
+|---:|---:|---:|
+| 0.40 | 0.465 | 0.876 |
+| 0.60 | 0.563 | 1.789 |
+| 0.80 | 0.634 | 2.490 |
+
+### Exposure Duration
+
+At a fixed exposure level of 0.70, longer exposure events produced larger peak and cumulative responses.
+
+| Duration | Peak Inflammation | Excess Inflammation AUC |
+|---:|---:|---:|
+| 1 day | 0.442 | 0.391 |
+| 3 days | 0.526 | 1.051 |
+| 7 days | 0.601 | 2.162 |
+| 14 days | 0.619 | 3.950 |
+
+### Temporal Response
+
+The strongest model-implied correlation between environmental exposure and simulated inflammation occurred at a **2-day lag**, with a correlation of approximately **0.781**.
+
+This is a property of the mathematical model and should not be interpreted as evidence that real biological inflammation necessarily peaks two days after exposure.
+
+### Structural Identifiability
+
+With constant medication level \(M\), the model depends on the medication-effect and natural-recovery parameters through the combined quantity
 
 ```math
 \delta = \beta M + \gamma
-```
-
-Synthetic parameter-recovery experiments therefore estimate the reduced parameters $\alpha$ and $\delta$.
-
-Parameter-recovery accuracy decreased substantially under larger simulated observational noise.
-
-The RK45 numerical implementation was validated against an exact constant-exposure solution and produced extremely small numerical error.
 
 ## Repository Structure
 
