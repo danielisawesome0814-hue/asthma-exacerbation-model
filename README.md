@@ -12,30 +12,32 @@ Daily PM2.5, ozone, temperature, and humidity measurements from the Fairfax Coun
 
 The exposure index is used as the forcing input to a nonlinear ordinary differential equation describing the balance between environmentally driven increases in inflammation and medication / natural recovery.
 
+## Mathematical Model
+
 The model is
 
-$$
+```math
 \frac{dI}{dt}
 =
 \alpha E(t)(1-I)
 -
-[\beta M+\gamma]I.
-$$
+[\beta M+\gamma]I
+```
 
 where:
 
-- \(I(t)\) is normalized simulated inflammation
-- \(E(t)\) is environmental exposure
-- \(\alpha\) controls environmental response
-- \(\beta\) controls medication effectiveness
-- \(M\) is the normalized medication level
-- \(\gamma\) controls natural recovery
+- $I(t)$ is normalized simulated inflammation
+- $E(t)$ is environmental exposure
+- $\alpha$ controls environmental response
+- $\beta$ controls medication effectiveness
+- $M$ is the normalized medication level
+- $\gamma$ controls natural recovery
 
 ## Environmental Exposure Index
 
 The normalized environmental variables are combined using
 
-$$
+```math
 E(t)
 =
 0.40P(t)
@@ -44,10 +46,10 @@ E(t)
 +
 0.15T(t)
 +
-0.15H(t),
-$$
+0.15H(t)
+```
 
-where \(P\), \(O\), \(T\), and \(H\) represent normalized PM2.5, ozone, temperature, and humidity.
+where $P(t)$, $O(t)$, $T(t)$, and $H(t)$ represent normalized PM2.5, ozone, temperature, and humidity.
 
 The weights are preliminary modeling assumptions rather than clinically calibrated values.
 
