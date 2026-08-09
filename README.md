@@ -117,8 +117,8 @@ This is a property of the mathematical model and should not be interpreted as ev
 
 With constant medication level \(M\), the model depends on the medication-effect and natural-recovery parameters through the combined quantity
 
-```math
-\delta = \beta M + \gamma
+```math $\delta$ = $\beta$ M + $\gamma$
+
 
 ## Repository Structure
 
