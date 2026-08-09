@@ -115,10 +115,12 @@ This is a property of the mathematical model and should not be interpreted as ev
 
 ### Structural Identifiability
 
-With constant medication level \(M\), the model depends on the medication-effect and natural-recovery parameters through the combined quantity
+With constant medication level $M$, the model depends on the medication-effect and natural-recovery parameters through the combined quantity
 
-```math $\delta$ = $\beta$ M + $\gamma$
+$\delta = \beta M + \gamma$
 
+Different values of $\beta$ and $\gamma$ that produce the same $\delta$ generated identical inflammation trajectories.
+Therefore, $\beta$ and $\gamma$ are not separately structurally identifiable under constant medication.
 
 ## Repository Structure
 
