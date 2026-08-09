@@ -80,13 +80,13 @@ Longer exposure events also produced larger cumulative inflammation responses.
 
 The strongest model-implied exposure-inflammation correlation occurred at a lag of approximately 2 days.
 
-Structural identifiability analysis showed that, when medication is constant, the parameters \(\beta\) and \(\gamma\) cannot be estimated separately because the model depends on them through
+Structural identifiability analysis showed that, when medication is constant, the parameters $\beta$ and $\gamma$ cannot be estimated separately because the model depends on them through
 
-$$
-\delta=\beta M+\gamma.
-$$
+```math
+\delta = \beta M + \gamma
+```
 
-Synthetic parameter-recovery experiments therefore estimate the reduced parameters \(\alpha\) and \(\delta\).
+Synthetic parameter-recovery experiments therefore estimate the reduced parameters $\alpha$ and $\delta$.
 
 Parameter-recovery accuracy decreased substantially under larger simulated observational noise.
 
